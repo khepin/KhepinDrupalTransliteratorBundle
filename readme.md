@@ -41,7 +41,7 @@ Then register the bundle in `AppKernel.php`:
 
 The bundle provides a Transliterator class with two methods:
 - One to just transliterate the text: `Khepin\DrupalTransliteratorBundle\Transliterator::transliterate`
-- One to make it URL friendly afterwards: `Khepin\DrupalTransliteratorBundle\Transliterator::transliterateAndUrlize`
+- One that is compatible directly with the declaration in doctrine extensions `Khepin\DrupalTransliteratorBundle\Transliterator::sluggableTransliterate`
 
 The bundle also overrides the standard Doctrine Extensions Sluggable listener so that
 it uses this transliteration method rather than the standard one. In order to use
