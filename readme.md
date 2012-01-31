@@ -13,7 +13,7 @@ Through the deps files add:
 
     [KhepinDrupalTransliteratorBundle]
         git=https://github.com/khepin/KhepinDrupalTransliteratorBundle.git
-        target=/bundles/Khepin
+        target=/bundles/Khepin/DrupalTransliteratorBundle
 
 Run your vendor script `./bin/vendors install`.
 
