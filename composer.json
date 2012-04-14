@@ -1,0 +1,19 @@
+
+{
+    "name": "khepin/drupal-transliterator-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle to use drupal transliteration (eg in doctrine sluggable extension).",
+    "keywords": ["slug transliteration"],
+    "homepage": "https://github.com/khepin/KhepinDrupalTransliteratorBundle",
+    "license": "GPLv2",
+    "authors": [
+        {
+            "name": "Sébastien Armand",
+            "email": "khepin@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "Khepin\\DrupalTransliteratorBundle": "" }
+    },
+    "target-dir": "Khepin/DrupalTransliteratorBundle"
+}
