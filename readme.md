@@ -25,17 +25,8 @@ In your `autoload.php` register the Khepin namespace:
         // ...
     ));
 
-Then register the bundle in `AppKernel.php`:
-
-    public function registerBundles()
-    {
-        $bundles = array(
-            //...
-            new Khepin\DrupalTransliteratorBundle\KhepinDrupalTransliteratorBundle(),
-            // ...
-        );
-        //...
-    }
+There is no real need to register the bundle as all it provides is a class with
+static methods to transliterate strings. Having it autoloaded is enough.
 
 # Usage
 
