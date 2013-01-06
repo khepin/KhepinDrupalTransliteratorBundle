@@ -2,9 +2,11 @@
 
 namespace Khepin\DrupalTransliteratorBundle;
 
+use Gedmo\Sluggable\Util\Urlizer;
+
 /**
  * Utility class to transliterate non alphabetic characters to their romanized
- * form if they have one. 
+ * form if they have one.
  */
 class Transliterator {
 
@@ -12,7 +14,7 @@ class Transliterator {
      * Tansliterates non alphabetic characters
      * @param string $text
      * @return string
-     * @throws Exception 
+     * @throws Exception
      */
     public static function transliterate($text) {
         if (!function_exists('_transliteration_process')) {
@@ -21,15 +23,15 @@ class Transliterator {
 
         return _transliteration_process($text);
     }
-    
+
     /**
      * Method to be compatible with the declaration in Doctrine extensions
      * @param type $text
      * @param type $separator
      * @param type $object
-     * @return type 
+     * @return type
      */
     public static function sluggableTransliterate($text, $separator, $object){
-        return self::transliterate($text);
+        return Urlizer::urlize(self::transliterate($text), $separator);
     }
 }
